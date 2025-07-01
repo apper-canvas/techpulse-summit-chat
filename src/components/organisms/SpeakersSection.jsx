@@ -9,13 +9,16 @@ import Button from '@/components/atoms/Button'
 import Loading from '@/components/ui/Loading'
 import Error from '@/components/ui/Error'
 import Empty from '@/components/ui/Empty'
+import ApplyToSpeakForm from '@/components/forms/ApplyToSpeakForm'
+import NominateSpeakerForm from '@/components/forms/NominateSpeakerForm'
 
 const SpeakersSection = () => {
   const [speakers, setSpeakers] = useState([])
   const [sessions, setSessions] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
-
+  const [showApplyForm, setShowApplyForm] = useState(false)
+  const [showNominateForm, setShowNominateForm] = useState(false)
   const loadData = async () => {
     try {
       setLoading(true)
@@ -43,16 +46,20 @@ useEffect(() => {
     return sessions.filter(session => session.speakerId === speakerId)
   }
 
-  const handleApplyToSpeak = () => {
-    // Open speaker application form in new tab
-    window.open('https://forms.techpulsesummit.com/speaker-application', '_blank')
-    toast.success('Speaker application form opened in new tab')
+const handleApplyToSpeak = () => {
+    setShowApplyForm(true)
   }
 
   const handleNominateSpeaker = () => {
-    // Open speaker nomination form in new tab
-    window.open('https://forms.techpulsesummit.com/nominate-speaker', '_blank')
-    toast.success('Speaker nomination form opened in new tab')
+    setShowNominateForm(true)
+  }
+
+  const handleCloseApplyForm = () => {
+    setShowApplyForm(false)
+  }
+
+  const handleCloseNominateForm = () => {
+    setShowNominateForm(false)
   }
   if (loading) {
     return (
@@ -162,8 +169,30 @@ useEffect(() => {
               </Button>
             </div>
           </div>
-        </motion.div>
+</motion.div>
       </div>
+
+      {/* Apply to Speak Form Modal */}
+      {showApplyForm && (
+        <ApplyToSpeakForm 
+          onClose={handleCloseApplyForm}
+          onSuccess={() => {
+            setShowApplyForm(false)
+            toast.success('Speaker application submitted successfully!')
+          }}
+        />
+      )}
+
+      {/* Nominate Speaker Form Modal */}
+      {showNominateForm && (
+        <NominateSpeakerForm 
+          onClose={handleCloseNominateForm}
+          onSuccess={() => {
+            setShowNominateForm(false)
+            toast.success('Speaker nomination submitted successfully!')
+          }}
+        />
+      )}
     </section>
   )
 }
