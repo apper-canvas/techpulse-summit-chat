@@ -1,3 +1,5 @@
+import React from "react";
+import Error from "@/components/ui/Error";
 import sessionsData from "@/services/mockData/sessions.json";
 
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -100,7 +102,7 @@ async getBySpeakerId(speakerId) {
         }
       }
       
-      // Speaker filter
+// Speaker filter
       if (filters.speakerId && session.speakerId !== filters.speakerId) {
         return false
       }
@@ -108,3 +110,4 @@ async getBySpeakerId(speakerId) {
       return true
     })
   }
+}
