@@ -1,10 +1,23 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { toast } from 'react-toastify'
 import ApperIcon from '@/components/ApperIcon'
 import SectionHeader from '@/components/molecules/SectionHeader'
 import Card from '@/components/atoms/Card'
-
 const VenueSection = () => {
+  const handleOpenMaps = () => {
+    try {
+      const address = "747 Howard Street, San Francisco, CA 94103"
+      const encodedAddress = encodeURIComponent(address)
+      const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`
+      
+      window.open(mapsUrl, '_blank', 'noopener,noreferrer')
+      toast.success('Opening maps application...')
+    } catch (error) {
+      toast.error('Unable to open maps. Please try again.')
+    }
+  }
+
   const venueFeatures = [
     {
       icon: 'MapPin',
@@ -27,7 +40,6 @@ const VenueSection = () => {
       description: 'Multiple dining options, coffee stations, and networking lounges with premium catering throughout the event.'
     }
   ]
-
   const directions = [
     {
       icon: 'Plane',
@@ -134,14 +146,13 @@ const VenueSection = () => {
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                     <ApperIcon name="MapPin" size={24} className="text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-2">Interactive Map</h4>
+<h4 className="text-xl font-bold text-white mb-2">Interactive Map</h4>
                   <p className="text-slate-300 mb-4">Click to view directions and explore the area</p>
-                  <button className="btn-primary">
+                  <button className="btn-primary" onClick={handleOpenMaps}>
                     <ApperIcon name="ExternalLink" size={16} />
                     Open in Maps
                   </button>
                 </div>
-                
                 {/* Decorative elements */}
                 <div className="absolute top-4 left-4 w-3 h-3 bg-primary rounded-full animate-pulse"></div>
                 <div className="absolute bottom-8 right-8 w-2 h-2 bg-accent rounded-full animate-pulse [animation-delay:1s]"></div>

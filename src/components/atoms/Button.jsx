@@ -33,7 +33,7 @@ const Button = ({
     ${variants[variant]} ${sizes[size]} ${className}
   `
 
-  return (
+return (
     <motion.button
       className={baseClasses}
       disabled={disabled || loading}
