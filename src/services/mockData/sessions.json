@@ -1,0 +1,122 @@
+[
+  {
+    "Id": 1,
+    "title": "The Future of AI in Software Development",
+    "description": "Explore how artificial intelligence is revolutionizing the way we write, test, and deploy code. Learn about the latest AI-powered development tools and their impact on productivity.",
+    "speakerId": 1,
+    "track": "AI & Machine Learning",
+    "startTime": "09:00",
+    "endTime": "09:45",
+    "room": "Main Stage"
+  },
+  {
+    "Id": 2,
+    "title": "Building Scalable Cloud Architecture",
+    "description": "Deep dive into modern cloud architecture patterns, microservices design, and container orchestration strategies for building enterprise-scale applications.",
+    "speakerId": 2,
+    "track": "Cloud & DevOps",
+    "startTime": "09:00",
+    "endTime": "09:45",
+    "room": "Tech Hall A"
+  },
+  {
+    "Id": 3,
+    "title": "Cybersecurity in the Age of Remote Work",
+    "description": "Understanding the evolving threat landscape and implementing robust security measures for distributed teams and remote infrastructure.",
+    "speakerId": 3,
+    "track": "Security",
+    "startTime": "09:00",
+    "endTime": "09:45",
+    "room": "Security Theater"
+  },
+  {
+    "Id": 4,
+    "title": "Quantum Computing: From Theory to Practice",
+    "description": "An introduction to quantum computing principles and real-world applications. Learn about quantum algorithms and their potential to solve complex problems.",
+    "speakerId": 4,
+    "track": "Emerging Tech",
+    "startTime": "10:00",
+    "endTime": "10:45",
+    "room": "Innovation Lab"
+  },
+  {
+    "Id": 5,
+    "title": "React 18 and the Future of Frontend",
+    "description": "Discover the latest features in React 18, including concurrent rendering, automatic batching, and new hooks. Build better user experiences with modern React patterns.",
+    "speakerId": 5,
+    "track": "Frontend",
+    "startTime": "10:00",
+    "endTime": "10:45",
+    "room": "Main Stage"
+  },
+  {
+    "Id": 6,
+    "title": "Kubernetes at Scale: Lessons Learned",
+    "description": "Real-world experiences managing Kubernetes clusters at enterprise scale. Common pitfalls, optimization strategies, and operational best practices.",
+    "speakerId": 6,
+    "track": "Cloud & DevOps",
+    "startTime": "10:00",
+    "endTime": "10:45",
+    "room": "Tech Hall A"
+  },
+  {
+    "Id": 7,
+    "title": "Zero Trust Security Architecture",
+    "description": "Implementing zero trust principles in modern infrastructure. Moving beyond perimeter security to a comprehensive identity-based security model.",
+    "speakerId": 7,
+    "track": "Security",
+    "startTime": "11:00",
+    "endTime": "11:45",
+    "room": "Security Theater"
+  },
+  {
+    "Id": 8,
+    "title": "Machine Learning Operations (MLOps)",
+    "description": "Streamlining the ML lifecycle from development to production. Tools, practices, and platforms for reliable ML deployments at scale.",
+    "speakerId": 8,
+    "track": "AI & Machine Learning",
+    "startTime": "11:00",
+    "endTime": "11:45",
+    "room": "Main Stage"
+  },
+  {
+    "Id": 9,
+    "title": "The Rise of Edge Computing",
+    "description": "Understanding edge computing architectures and their applications in IoT, 5G, and real-time processing. Building distributed systems for the edge.",
+    "speakerId": 9,
+    "track": "Emerging Tech",
+    "startTime": "11:00",
+    "endTime": "11:45",
+    "room": "Innovation Lab"
+  },
+  {
+    "Id": 10,
+    "title": "Web3 and Decentralized Applications",
+    "description": "Exploring blockchain technology, smart contracts, and decentralized applications. Understanding the potential and challenges of Web3 development.",
+    "speakerId": 10,
+    "track": "Blockchain",
+    "startTime": "14:00",
+    "endTime": "14:45",
+    "room": "Crypto Corner"
+  },
+  {
+    "Id": 11,
+    "title": "Performance Optimization Techniques",
+    "description": "Advanced techniques for optimizing application performance. Profiling, caching strategies, and database optimization for high-traffic applications.",
+    "speakerId": 5,
+    "track": "Frontend",
+    "startTime": "14:00",
+    "endTime": "14:45",
+    "room": "Main Stage"
+  },
+  {
+    "Id": 12,
+    "title": "Infrastructure as Code Best Practices",
+    "description": "Managing infrastructure through code using Terraform, CloudFormation, and other IaC tools. Version control, testing, and deployment strategies.",
+    "speakerId": 2,
+    "track": "Cloud & DevOps",
+    "startTime": "14:00",
+    "endTime": "14:45",
+    "room": "Tech Hall A"
+  }
+]

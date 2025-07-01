@@ -1,0 +1,92 @@
+[
+  {
+    "Id": 1,
+    "name": "Dr. Sarah Chen",
+    "title": "Chief AI Officer",
+    "company": "TechNova Labs",
+    "bio": "Dr. Sarah Chen is a leading expert in artificial intelligence and machine learning with over 15 years of experience. She has published 50+ research papers and holds 12 patents in AI technology. Previously led AI initiatives at Google and Microsoft.",
+    "photo": "https://images.unsplash.com/photo-1494790108755-2616b332c15a?w=400&h=400&fit=crop&crop=face",
+    "sessionIds": [1]
+  },
+  {
+    "Id": 2,
+    "name": "Marcus Rodriguez",
+    "title": "Senior Cloud Architect",
+    "company": "CloudScale Solutions",
+    "bio": "Marcus is a certified cloud architect with expertise in AWS, Azure, and GCP. He has designed and implemented cloud solutions for Fortune 500 companies and is a frequent speaker at tech conferences worldwide.",
+    "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    "sessionIds": [2, 12]
+  },
+  {
+    "Id": 3,
+    "name": "Elena Volkov",
+    "title": "Cybersecurity Director",
+    "company": "SecureNet Inc",
+    "bio": "Elena has 12 years of experience in cybersecurity, specializing in threat intelligence and incident response. She holds CISSP and CISM certifications and has helped organizations defend against advanced persistent threats.",
+    "photo": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face",
+    "sessionIds": [3]
+  },
+  {
+    "Id": 4,
+    "name": "Dr. James Liu",
+    "title": "Quantum Computing Researcher",
+    "company": "Quantum Dynamics",
+    "bio": "Dr. Liu is a quantum computing pioneer with a PhD in Physics from MIT. He has contributed to major breakthroughs in quantum algorithms and is currently working on practical quantum computing applications.",
+    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    "sessionIds": [4]
+  },
+  {
+    "Id": 5,
+    "name": "Emma Thompson",
+    "title": "Senior Frontend Engineer",
+    "company": "React Core Team",
+    "bio": "Emma is a core contributor to React and has been instrumental in developing React 18 features. She's passionate about developer experience and has created several popular open-source tools used by millions of developers.",
+    "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+    "sessionIds": [5, 11]
+  },
+  {
+    "Id": 6,
+    "name": "Alex Kumar",
+    "title": "Platform Engineering Lead",
+    "company": "ScaleOps",
+    "bio": "Alex leads platform engineering at ScaleOps, managing Kubernetes clusters that serve millions of users. He's an expert in container orchestration and has contributed to several CNCF projects.",
+    "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
+    "sessionIds": [6]
+  },
+  {
+    "Id": 7,
+    "name": "Rachel Martinez",
+    "title": "Security Architect",
+    "company": "ZeroTrust Systems",
+    "bio": "Rachel specializes in zero trust architecture and has helped numerous enterprises transition from traditional perimeter-based security to modern zero trust models. She's a CISSP and holds advanced certifications in cloud security.",
+    "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
+    "sessionIds": [7]
+  },
+  {
+    "Id": 8,
+    "name": "David Park",
+    "title": "MLOps Engineering Manager",
+    "company": "AI Pipeline Corp",
+    "bio": "David has extensive experience in building and scaling machine learning infrastructure. He leads a team that manages ML pipelines processing billions of predictions daily and is an advocate for ML best practices.",
+    "photo": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&h=400&fit=crop&crop=face",
+    "sessionIds": [8]
+  },
+  {
+    "Id": 9,
+    "name": "Lisa Chang",
+    "title": "Edge Computing Specialist",
+    "company": "EdgeTech Innovations",
+    "bio": "Lisa is at the forefront of edge computing technology, working on solutions that bring computation closer to data sources. She has designed edge architectures for autonomous vehicles and IoT applications.",
+    "photo": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face",
+    "sessionIds": [9]
+  },
+  {
+    "Id": 10,
+    "name": "Michael Foster",
+    "title": "Blockchain Developer",
+    "company": "DecentralWeb",
+    "bio": "Michael is a full-stack blockchain developer with expertise in Ethereum, Solidity, and DeFi protocols. He has built several successful dApps and is passionate about the future of decentralized technology.",
+    "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+    "sessionIds": [10]
+  }
+]

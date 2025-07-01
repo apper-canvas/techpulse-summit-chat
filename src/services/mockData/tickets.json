@@ -1,0 +1,54 @@
+[
+  {
+    "tier": "Early Bird",
+    "price": 299,
+    "description": "Perfect for individual developers and early adopters",
+    "perks": [
+      "Access to all sessions and workshops",
+      "Conference materials and swag bag",
+      "Networking lunch and coffee breaks",
+      "Digital access to session recordings"
+    ],
+    "available": true
+  },
+  {
+    "tier": "Professional",
+    "price": 599,
+    "description": "Ideal for professionals and team leads",
+    "perks": [
+      "Everything in Early Bird",
+      "VIP seating in main auditorium",
+      "Exclusive networking events",
+      "Meet & greet with select speakers",
+      "Priority access to workshops",
+      "1-year access to TechPulse platform"
+    ],
+    "available": true
+  },
+  {
+    "tier": "Enterprise",
+    "price": 999,
+    "description": "Premium experience for executives and decision makers",
+    "perks": [
+      "Everything in Professional",
+      "Private executive lounge access",
+      "One-on-one meetings with speakers",
+      "Premium welcome reception",
+      "Dedicated concierge service",
+      "Custom training session for your team"
+    ],
+    "available": true
+  },
+  {
+    "tier": "Student",
+    "price": 99,
+    "description": "Special pricing for students and academics",
+    "perks": [
+      "Access to all sessions",
+      "Conference materials",
+      "Networking opportunities",
+      "Career fair access"
+    ],
+    "available": true
+  }
+]
