@@ -27,8 +27,11 @@ export default {
         'gradient-dark': 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
         'gradient-hero': 'linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%)',
       },
-      backdropBlur: {
+backdropBlur: {
         xs: '2px',
+      },
+      scale: {
+        '102': '1.02',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
