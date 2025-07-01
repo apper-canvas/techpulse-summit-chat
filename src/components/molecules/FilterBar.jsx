@@ -117,7 +117,7 @@ const FilterBar = ({
           {/* Filter Controls */}
           <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
             {/* Track Filter */}
-            <div>
+<div>
               <label className="block text-sm font-medium text-slate-300 mb-2">
                 Track
               </label>
@@ -128,13 +128,14 @@ const FilterBar = ({
                 placeholder="All tracks"
                 isClearable
                 isSearchable
+                menuPlacement="top"
                 styles={customSelectStyles}
                 formatOptionLabel={formatOptionLabel}
                 className="text-sm"
               />
             </div>
 
-            {/* Topic Filter */}
+{/* Topic Filter */}
             <div>
               <label className="block text-sm font-medium text-slate-300 mb-2">
                 Topic
@@ -146,13 +147,14 @@ const FilterBar = ({
                 placeholder="All topics"
                 isClearable
                 isSearchable
+                menuPlacement="top"
                 styles={customSelectStyles}
                 formatOptionLabel={formatOptionLabel}
                 className="text-sm"
               />
             </div>
 
-            {/* Speaker Filter */}
+{/* Speaker Filter */}
             <div>
               <label className="block text-sm font-medium text-slate-300 mb-2">
                 Speaker
@@ -164,6 +166,7 @@ const FilterBar = ({
                 placeholder="All speakers"
                 isClearable
                 isSearchable
+                menuPlacement="top"
                 styles={customSelectStyles}
                 formatOptionLabel={formatOptionLabel}
                 className="text-sm"
