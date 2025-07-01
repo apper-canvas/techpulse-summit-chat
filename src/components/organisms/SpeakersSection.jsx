@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { toast } from 'react-toastify'
 import { speakerService } from '@/services/api/speakerService'
 import { sessionService } from '@/services/api/sessionService'
 import SectionHeader from '@/components/molecules/SectionHeader'
 import SpeakerCard from '@/components/molecules/SpeakerCard'
+import Button from '@/components/atoms/Button'
 import Loading from '@/components/ui/Loading'
 import Error from '@/components/ui/Error'
 import Empty from '@/components/ui/Empty'
@@ -33,7 +35,7 @@ const SpeakersSection = () => {
     }
   }
 
-  useEffect(() => {
+useEffect(() => {
     loadData()
   }, [])
 
@@ -41,6 +43,17 @@ const SpeakersSection = () => {
     return sessions.filter(session => session.speakerId === speakerId)
   }
 
+  const handleApplyToSpeak = () => {
+    // Open speaker application form in new tab
+    window.open('https://forms.techpulsesummit.com/speaker-application', '_blank')
+    toast.success('Speaker application form opened in new tab')
+  }
+
+  const handleNominateSpeaker = () => {
+    // Open speaker nomination form in new tab
+    window.open('https://forms.techpulsesummit.com/nominate-speaker', '_blank')
+    toast.success('Speaker nomination form opened in new tab')
+  }
   if (loading) {
     return (
       <section id="speakers" className="py-20 lg:py-32">
@@ -130,13 +143,23 @@ const SpeakersSection = () => {
               We're always looking for innovative speakers to share their expertise. 
               Join our community of thought leaders and tech pioneers.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary">
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                variant="primary"
+                icon="Mic"
+                onClick={handleApplyToSpeak}
+                className="btn-primary"
+              >
                 Apply to Speak
-              </button>
-              <button className="btn-secondary">
+              </Button>
+              <Button 
+                variant="secondary"
+                icon="UserPlus"
+                onClick={handleNominateSpeaker}
+                className="btn-secondary"
+              >
                 Nominate a Speaker
-              </button>
+              </Button>
             </div>
           </div>
         </motion.div>
