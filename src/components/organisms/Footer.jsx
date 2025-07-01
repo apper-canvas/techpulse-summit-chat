@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { toast } from 'react-toastify'
 import ApperIcon from '@/components/ApperIcon'
 
 const Footer = () => {
@@ -17,6 +18,8 @@ const Footer = () => {
     { name: 'Tickets', href: '#tickets' },
     { name: 'Venue', href: '#venue' }
   ]
+const [email, setEmail] = useState('')
+  const [isSubscribing, setIsSubscribing] = useState(false)
 
   const scrollToSection = (href) => {
     const element = document.querySelector(href)
@@ -25,6 +28,43 @@ const Footer = () => {
     }
   }
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault()
+    
+    if (!email.trim()) {
+      toast.error('Please enter your email address')
+      return
+    }
+
+    if (!validateEmail(email)) {
+      toast.error('Please enter a valid email address')
+      return
+    }
+
+    setIsSubscribing(true)
+    
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      
+      // Simulate random success/failure for demo
+      if (Math.random() > 0.2) {
+        toast.success('Successfully subscribed to newsletter!')
+        setEmail('')
+      } else {
+        toast.error('Subscription failed. Please try again.')
+      }
+    } catch (error) {
+      toast.error('Something went wrong. Please try again.')
+    } finally {
+      setIsSubscribing(false)
+    }
+  }
   return (
     <footer className="bg-surface/50 backdrop-blur-sm border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -138,17 +178,33 @@ const Footer = () => {
               Get the latest updates on speakers, sessions, and exclusive offers. 
               Be the first to know about TechPulse Summit news.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+<form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="flex-1 rounded-lg border border-slate-600 bg-slate-800/50 backdrop-blur-sm px-4 py-3 text-slate-100 placeholder-slate-400 focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all duration-200"
+                disabled={isSubscribing}
+                className="flex-1 rounded-lg border border-slate-600 bg-slate-800/50 backdrop-blur-sm px-4 py-3 text-slate-100 placeholder-slate-400 focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               />
-              <button className="btn-primary whitespace-nowrap">
-                <ApperIcon name="Send" size={16} />
-                Subscribe
+              <button 
+                type="submit"
+                disabled={isSubscribing}
+                className="btn-primary whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubscribing ? (
+                  <>
+                    <ApperIcon name="Loader2" size={16} className="animate-spin" />
+                    Subscribing...
+                  </>
+                ) : (
+                  <>
+                    <ApperIcon name="Send" size={16} />
+                    Subscribe
+                  </>
+                )}
               </button>
-            </div>
+            </form>
           </div>
         </motion.div>
 
